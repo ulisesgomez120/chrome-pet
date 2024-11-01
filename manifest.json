@@ -1,0 +1,19 @@
+{
+  "manifest_version": 2,
+  "name": "Moving Characters",
+  "version": "1.0",
+  "description": "A Chrome extension that allows users to interact with animated characters",
+  "permissions": ["activeTab", "storage"],
+  "browser_action": {
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ]
+}
