@@ -1,19 +1,26 @@
 {
-  "manifest_version": 2,
-  "name": "Moving Characters",
-  "version": "1.0",
-  "description": "A Chrome extension that allows users to interact with animated characters",
+  "manifest_version": 3,
+  "name": "Web Pet Companion",
+  "version": "1.0.0",
+  "description": "A Chrome extension that adds an interactive virtual pet to your browsing experience",
   "permissions": ["activeTab", "storage"],
-  "browser_action": {
+  "action": {
     "default_popup": "popup.html"
   },
   "background": {
-    "scripts": ["background.js"]
+    "service_worker": "background.js",
+    "type": "module"
   },
   "content_scripts": [
     {
       "matches": ["<all_urls>"],
       "js": ["content.js"]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["assets/*"],
+      "matches": ["<all_urls>"]
     }
   ]
 }
