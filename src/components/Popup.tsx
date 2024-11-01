@@ -48,8 +48,40 @@ const Popup: React.FC = () => {
                 </div>
               </div>
             </TabsContent>
+            <TabsContent value='settings'>
+              <div className='space-y-4'>
+                <div className='space-y-2'>
+                  <label className='text-sm font-medium'>Movement Speed</label>
+                  <input type='range' min='1' max='100' defaultValue='50' className='w-full' />
+                </div>
 
-            {/* Other TabsContent components remain the same */}
+                <div className='flex items-center justify-between'>
+                  <label className='text-sm font-medium'>Sound Effects</label>
+                  <input type='checkbox' defaultChecked className='h-4 w-4' />
+                </div>
+
+                <div className='flex items-center justify-between'>
+                  <label className='text-sm font-medium'>Follow Tabs</label>
+                  <input type='checkbox' className='h-4 w-4' />
+                </div>
+              </div>
+            </TabsContent>
+
+            <TabsContent value='store'>
+              <div className='grid grid-cols-2 gap-3'>
+                {[1, 2, 3, 4].map((item) => (
+                  <div key={item} className='p-2 bg-secondary rounded-lg flex flex-col items-center'>
+                    <div className='w-12 h-12 bg-background rounded-full flex items-center justify-center mb-2'>
+                      <span className='text-xl'>🐱</span>
+                    </div>
+                    <span className='text-xs font-medium'>Pet {item}</span>
+                    <button className='mt-2 px-2 py-1 text-xs bg-primary text-primary-foreground rounded-md hover:bg-primary/90'>
+                      {item === 1 ? "Selected" : "Select"}
+                    </button>
+                  </div>
+                ))}
+              </div>
+            </TabsContent>
           </div>
         </Tabs>
       </Card>
