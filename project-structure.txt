@@ -1,7 +1,6 @@
 Project Structure:
 
 .gitignore
-bun.lockb
 manifest.json
 package.json
 package-lock.json
@@ -11,6 +10,7 @@ tsconfig.json
 components/
 components/ui/
 components/ui/card.tsx
+components/ui/tabs.tsx
 lib/
 lib/utils.ts
 src/
@@ -25,6 +25,7 @@ src/assets/.DS_Store
 src/assets/effects/
 src/assets/sounds/
 src/assets/sprites/
+src/background.ts
 src/character/
 src/character/BehaviorEngine.ts
 src/character/Character.ts
@@ -36,8 +37,8 @@ src/components/CharacterSelect.tsx
 src/components/Popup.tsx
 src/components/Settings.tsx
 src/components/Store.tsx
+src/content.ts
 src/content/
-src/content/content.ts
 src/content/ElementDetector.ts
 src/content/PerformanceManager.ts
 src/content/PetController.ts
@@ -46,6 +47,8 @@ src/core/AchievementSystem.ts
 src/core/MessageSystem.ts
 src/core/Premium.ts
 src/core/StorageManager.ts
+src/popup.html
+src/popup.tsx
 src/types/
 src/types/animation.d.ts
 src/types/character.d.ts
